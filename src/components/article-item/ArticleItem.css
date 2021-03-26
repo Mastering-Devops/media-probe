@@ -1,0 +1,20 @@
+.article-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 24px;
+  border: 1px solid #e3e3e3;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+.article-content {
+  padding-right: 16px;
+}
+
+.article-image {
+  min-width: 210px;
+}
+
+.article-item:last-child {
+  margin-bottom: 0px;
+}
