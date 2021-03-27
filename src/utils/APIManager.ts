@@ -10,7 +10,7 @@ export const APIManager = {
   async get(url: string, config: IRequestConfig = {}) {
     return axios.get(url, {
       params: {
-        'api-key': 'jqg16VP0rtKyj9DXZ1xJDNLeU35BNRGL',
+        'api-key': process.env.REACT_APP_API_TOKEN,
         ...config.params,
       },
     });
