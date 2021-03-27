@@ -7,8 +7,9 @@ interface ArticleSearchProps {
 
 export default function ArticleSearch({ value, onChange }: ArticleSearchProps) {
   return (
-    <div className="article-search">
+    <div className="article-search-container">
       <input
+        placeholder="Buscar"
         onChange={(e) => {
           onChange(e.target.value);
         }}

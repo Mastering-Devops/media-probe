@@ -2,9 +2,8 @@ import { AxiosResponse } from 'axios';
 import { apiUrls } from '../common/constants/apiUrls';
 import { ArticleResponse } from '../common/interfaces/api-response';
 import { ArticleSearchResponse } from '../common/interfaces/api-response/article-search';
+import { Period } from '../common/types';
 import { APIManager } from '../utils/APIManager';
-
-type Period = '1' | '7' | '30';
 
 export const ArticleApi = {
   getArticles: (

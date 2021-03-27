@@ -1,5 +1,9 @@
-.article-search {
+.article-search-container {
   margin-bottom: 16px;
-  /* width: 100%; */
-  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.article-search-container > input {
+  padding: 8px;
 }
