@@ -11,6 +11,7 @@ export default function Tabs<T>({ list, onSelect, selectedTab }: TabsProps<T>) {
   const renderTabs = () => {
     return list.map((x, index) => (
       <button
+        data-testid={`tab-${index}`}
         key={index}
         onClick={() => onSelect(x.value)}
         className={getClassName(selectedTab, x.value)}

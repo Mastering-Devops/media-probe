@@ -18,13 +18,20 @@ function getImageUrl(media: IMedia[], format: ArticleImageFormat) {
 
 export default function ArticleItem({ article, onSelect }: ArticleItemProps) {
   return (
-    <div className="article-item" onClick={() => onSelect(article)}>
+    <div
+      data-testid="article-item"
+      className="article-item"
+      onClick={() => onSelect(article)}
+    >
       <div className="article-content">
         <h2>{article.title}</h2>
         <p>{article.abstract}</p>
         <p>{article.byline}</p>
       </div>
-      <div className="image-container article-image">
+      <div
+        data-testid="article-image"
+        className="image-container article-image"
+      >
         <Image url={getImageUrl(article.media, 'mediumThreeByTwo210')} />
       </div>
     </div>

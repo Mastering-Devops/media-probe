@@ -9,6 +9,7 @@ export default function ArticleSearch({ value, onChange }: ArticleSearchProps) {
   return (
     <div className="article-search-container">
       <input
+        data-testid="search-input"
         placeholder="Buscar"
         onChange={(e) => {
           onChange(e.target.value);

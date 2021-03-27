@@ -21,8 +21,9 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "test": "react-scripts test --coverage",
+    "eject": "react-scripts eject",
+    "test:debug": "react-scripts --inspect-brk test --runInBand --no-cache"
   },
   "eslintConfig": {
     "extends": [
@@ -43,7 +44,27 @@
     ]
   },
   "devDependencies": {
+    "@types/enzyme": "^3.10.8",
     "@types/react-router-dom": "^5.1.7",
+    "@wojtekmaj/enzyme-adapter-react-17": "^0.6.0",
+    "enzyme": "^3.11.0",
     "prettier": "^2.2.1"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/components/**/*.{ts,tsx}",
+      "src/services/*.{ts,tsx}",
+      "src/helpers/*.{ts,tsx}",
+      "!**/node_modules/**",
+      "!**/vendor/**"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 80,
+        "functions": 80,
+        "lines": 80,
+        "statements": -10
+      }
+    }
   }
 }

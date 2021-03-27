@@ -2,12 +2,12 @@ import { useEffect, useState } from 'react';
 import { useHistory, useParams } from 'react-router';
 import { IArticleSearch } from '../../common/interfaces/entities';
 import { IMultimedia } from '../../common/interfaces/entities/multimedia';
-import { ArticleApi } from '../../services/articles';
+import { searchArticles } from '../../services/articles';
 import { Image } from '../shared';
 import { ArticleDetailParams } from './ArticleDetail.interface';
 import './ArticleDetail.css';
 
-function getImageUrl(multimedia: IMultimedia[]) {
+export function getImageUrl(multimedia: IMultimedia[]) {
   if (!multimedia.length) return null;
 
   const mediaFound = multimedia.find(
@@ -19,7 +19,7 @@ function getImageUrl(multimedia: IMultimedia[]) {
 }
 
 export default function ArticleDetail() {
-  const [article2, setArticle] = useState<IArticleSearch>();
+  const [article, setArticle] = useState<IArticleSearch>();
   const {
     year,
     month,
@@ -33,33 +33,43 @@ export default function ArticleDetail() {
 
   useEffect(() => {
     setLoading(true);
-    ArticleApi.searchArticles(year, month, day, section, subsection, reference)
-      .then((result) => {
-        setArticle(result.data.response.docs[0]);
+    async function search() {
+      try {
+        const result = await searchArticles(
+          year,
+          month,
+          day,
+          section,
+          subsection,
+          reference,
+        );
+        console.log({ RESULT: result });
+        setArticle(result[0]);
         setLoading(false);
-      })
-      .catch(() => {
+      } catch (error) {
         setLoading(false);
-      });
+      }
+    }
+    search();
   }, [year, month, day, section, subsection, reference]);
 
   if (loading) return <>Loading...</>;
-  if (!article2) return <>Ocurrió un error al cargar los datos</>;
+  if (!article) return <>Ocurrió un error al cargar los datos</>;
 
   return (
     <div className="article-detail">
       <button onClick={() => history.push('/')}>Volver</button>
       <div>
-        <h1 className="article-headline-main">{article2.headline.main}</h1>
-        <p className="article-abstract">{article2.abstract}</p>
+        <h1 className="article-headline-main">{article.headline.main}</h1>
+        <p className="article-abstract">{article.abstract}</p>
       </div>
       <div className="image-container">
-        <Image url={getImageUrl(article2.multimedia)} />
+        <Image url={getImageUrl(article.multimedia)} />
       </div>
       <div>
-        <p className="byline">{article2.byline.original}</p>
-        <p className="pub-date">{new Date(article2.pub_date).toDateString()}</p>
-        <p className="article-lead-paragrah">{article2.lead_paragraph}</p>
+        <p className="byline">{article.byline.original}</p>
+        <p className="pub-date">{new Date(article.pub_date).toDateString()}</p>
+        <p className="article-lead-paragrah">{article.lead_paragraph}</p>
       </div>
     </div>
   );
