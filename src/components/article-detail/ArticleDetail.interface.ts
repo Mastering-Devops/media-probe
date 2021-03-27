@@ -1,5 +1,6 @@
 import { IArticle } from '../../common/interfaces/entities';
 
-export interface ArticleItemProps {
+export interface ArticleDetailProps {
   article: IArticle;
+  onBack: () => void;
 }

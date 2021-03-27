@@ -5,6 +5,12 @@
   border: 1px solid #e3e3e3;
   border-radius: 8px;
   margin-bottom: 16px;
+  cursor: pointer;
+}
+
+.article-item:hover {
+  background: #e1e1e1;
+  border: 1px solid #d0d0d0;
 }
 
 .article-content {
