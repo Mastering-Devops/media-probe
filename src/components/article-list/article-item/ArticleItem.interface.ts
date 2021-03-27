@@ -1,6 +1,11 @@
-import { IArticle } from '../../../common/interfaces/entities';
+import { IViewedArticle } from '../../../common/interfaces/entities';
 
 export interface ArticleItemProps {
-  article: IArticle;
-  onSelect: (value: IArticle) => void;
+  article: IViewedArticle;
+  onSelect: (value: IViewedArticle) => void;
 }
+
+export type ArticleImageFormat =
+  | 'Standard Thumbnail'
+  | 'mediumThreeByTwo210'
+  | 'mediumThreeByTwo440';

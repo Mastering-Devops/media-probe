@@ -12,3 +12,8 @@
     max-width: 1200px;
   }
 }
+
+.image-container {
+  display: flex;
+  justify-content: center;
+}

@@ -1,0 +1,19 @@
+.article-headline-main {
+  font-size: 2.5em;
+  font-style: italic;
+}
+
+.article-detail .article-abstract,
+.article-detail .article-lead-paragrah {
+  font-size: 1.5em;
+}
+
+.byline {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.pub-date {
+  font-weight: 400;
+  font-size: 1.2em;
+}

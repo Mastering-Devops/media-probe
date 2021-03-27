@@ -71,7 +71,7 @@ export const defaultValues = [
     asset_id: 100000007670516,
     source: 'New York Times',
     published_date: '2021-03-23',
-    updated: '2021-03-24 10:53:22',
+    updated: '2021-03-26 20:30:12',
     section: 'Style',
     subsection: '',
     nytdsection: 'style',
@@ -95,27 +95,28 @@ export const defaultValues = [
       {
         type: 'image',
         subtype: 'photo',
-        caption: 'The contents of Jensen Karp’s box of Cinnamon Toast Crunch.',
+        caption:
+          'The contents of Jensen Karp&rsquo;s box of Cinnamon Toast Crunch.',
         copyright: 'Jensen Karp',
         approved_for_syndication: 0,
         'media-metadata': [
           {
             url:
-              'https://static01.nyt.com/images/2021/03/23/fashion/23CINNAMON-TOAST-CRUNCH2/23CINNAMON-TOAST-CRUNCH2-thumbStandard.jpg',
+              'https://static01.nyt.com/images/2021/03/28/fashion/23CINNAMON-TOAST-CRUNCH2/23CINNAMON-TOAST-CRUNCH2-thumbStandard.jpg',
             format: 'Standard Thumbnail',
             height: 75,
             width: 75,
           },
           {
             url:
-              'https://static01.nyt.com/images/2021/03/23/fashion/23CINNAMON-TOAST-CRUNCH2/23CINNAMON-TOAST-CRUNCH2-mediumThreeByTwo210-v2.jpg',
+              'https://static01.nyt.com/images/2021/03/28/fashion/23CINNAMON-TOAST-CRUNCH2/23CINNAMON-TOAST-CRUNCH2-mediumThreeByTwo210-v2.jpg',
             format: 'mediumThreeByTwo210',
             height: 140,
             width: 210,
           },
           {
             url:
-              'https://static01.nyt.com/images/2021/03/23/fashion/23CINNAMON-TOAST-CRUNCH2/23CINNAMON-TOAST-CRUNCH2-mediumThreeByTwo440-v2.jpg',
+              'https://static01.nyt.com/images/2021/03/28/fashion/23CINNAMON-TOAST-CRUNCH2/23CINNAMON-TOAST-CRUNCH2-mediumThreeByTwo440-v2.jpg',
             format: 'mediumThreeByTwo440',
             height: 293,
             width: 440,
@@ -132,12 +133,12 @@ export const defaultValues = [
     asset_id: 100000007671920,
     source: 'New York Times',
     published_date: '2021-03-25',
-    updated: '2021-03-26 10:06:09',
+    updated: '2021-03-26 13:08:27',
     section: 'Business',
     subsection: '',
     nytdsection: 'business',
     adx_keywords:
-      'Labor and Jobs;Automobiles;Wages and Salaries;Waste Materials and Disposal;Georgia;Peachtree City (Ga)',
+      'Automobile Service and Charging Stations;Wages and Salaries;Currency;Workplace Hazards and Violations;A OK Walker Luxury Autoworks (Peachtree City, Ga);Peachtree City (Ga)',
     column: null,
     byline: 'By Heather Murphy',
     type: 'Article',
@@ -146,14 +147,14 @@ export const defaultValues = [
     abstract:
       'It’s not technically illegal to do so, according to the Department of Labor, but that doesn’t make it OK, according to the former employee’s new Instagram fans.',
     des_facet: [
-      'Labor and Jobs',
-      'Automobiles',
+      'Automobile Service and Charging Stations',
       'Wages and Salaries',
-      'Waste Materials and Disposal',
+      'Currency',
+      'Workplace Hazards and Violations',
     ],
-    org_facet: [],
+    org_facet: ['A OK Walker Luxury Autoworks (Peachtree City, Ga)'],
     per_facet: [],
-    geo_facet: ['Georgia', 'Peachtree City (Ga)'],
+    geo_facet: ['Peachtree City (Ga)'],
     media: [
       {
         type: 'image',
@@ -741,7 +742,7 @@ export const defaultValues = [
     asset_id: 100000007650312,
     source: 'New York Times',
     published_date: '2021-03-23',
-    updated: '2021-03-24 09:21:07',
+    updated: '2021-03-26 20:29:49',
     section: 'Style',
     subsection: '',
     nytdsection: 'style',

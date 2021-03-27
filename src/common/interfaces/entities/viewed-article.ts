@@ -1,8 +1,10 @@
 import { IMedia } from './media';
 
-export interface IArticle {
+export interface IViewedArticle {
   title: string;
   abstract: string;
   media: IMedia[];
   published_date: string;
+  byline: string;
+  url: string;
 }

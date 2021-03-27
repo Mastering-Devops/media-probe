@@ -1,5 +1,5 @@
-import { IArticle } from './entities';
+import { IViewedArticle } from './entities';
 
 export interface IRootState {
-  currentArticle: IArticle | undefined;
+  currentArticle: IViewedArticle | undefined;
 }
