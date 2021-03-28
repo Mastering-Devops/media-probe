@@ -1,6 +1,18 @@
-# Getting Started with Create React App
+# Getting Started with Media Probe
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+In order to run this project, you'll need to create an account on:
+https://developer.nytimes.com/accounts/create
+
+Then you'll have to create an application here:
+https://developer.nytimes.com/my-apps/new-app
+
+This project only use Most Popular API & Article Search API.
+
+You will need to create an .env file and place the REACT_APP_API_TOKEN
+
+Like this REACT_APP_API_TOKEN=your-api-key
+
+Make sure you run: yarn install and then you are good to go. Have fun :)
 
 ## Available Scripts
 
