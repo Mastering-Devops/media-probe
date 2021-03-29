@@ -3,7 +3,7 @@ import { ReactWrapper, mount } from 'enzyme';
 import { routerMatch } from '../../helpers/tests';
 import { articleDetailMultimedia } from '../../mocks/article-detail';
 import * as ArticleDetail from './ArticleDetail';
-import * as ArticleApi from '../../services/articles';
+import * as ArticlesSearchApi from '../../services/articlesSearch';
 
 // jest.mock('../../services/articles.ts');
 
@@ -38,7 +38,7 @@ describe('getImageUrl', () => {
 describe('ArticleDetail', () => {
   let searchArticlesSpy: jest.SpyInstance;
 
-  searchArticlesSpy = jest.spyOn(ArticleApi, 'searchArticles');
+  searchArticlesSpy = jest.spyOn(ArticlesSearchApi, 'searchArticles');
   act(() => {
     render(
       routerMatch(ArticleDetail.default, {

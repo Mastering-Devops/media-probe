@@ -11,13 +11,8 @@ describe('articles service', () => {
 
   it('getArticles works', () => {
     expect.assertions(1);
-    return expect(articles.getArticles('7')).resolves.toHaveLength(1);
-  });
-
-  it('searchArticles works', () => {
-    expect.assertions(1);
-    return expect(
-      articles.searchArticles('', '', '', '', '', ''),
-    ).resolves.toHaveLength(1);
+    return articles
+      .getArticles('7')
+      .then((result) => expect(result).toHaveLength(1));
   });
 });

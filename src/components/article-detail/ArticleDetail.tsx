@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { useHistory, useParams } from 'react-router';
 import { IArticleSearch } from '../../common/interfaces/entities';
 import { IMultimedia } from '../../common/interfaces/entities/multimedia';
-import { searchArticles } from '../../services/articles';
+import { searchArticles } from '../../services/articlesSearch';
 import { Image } from '../shared';
 import { ArticleDetailParams } from './ArticleDetail.interface';
 import './ArticleDetail.css';
@@ -43,7 +43,6 @@ export default function ArticleDetail() {
           subsection,
           reference,
         );
-        console.log({ RESULT: result });
         setArticle(result[0]);
         setLoading(false);
       } catch (error) {

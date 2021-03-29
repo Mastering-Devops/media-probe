@@ -21,7 +21,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --coverage",
+    "test": "react-scripts test --coverage --watchAll --no-cache",
     "eject": "react-scripts eject",
     "test:debug": "react-scripts --inspect-brk test --runInBand --no-cache"
   },
@@ -44,6 +44,7 @@
     ]
   },
   "devDependencies": {
+    "@testing-library/react-hooks": "^5.1.0",
     "@types/enzyme": "^3.10.8",
     "@types/react-router-dom": "^5.1.7",
     "@wojtekmaj/enzyme-adapter-react-17": "^0.6.0",
