@@ -28,7 +28,7 @@ jobs:
       run: npm install
 
     - name: Run the tests
-      run: CI=true npm test -- --coverage
+      run: CI=true npm test
 
     - name: Build
       run: npm run build
